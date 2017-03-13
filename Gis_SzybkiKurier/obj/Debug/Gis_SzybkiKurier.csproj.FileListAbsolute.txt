@@ -1,0 +1,6 @@
+C:\Users\Slightom\Documents\Visual Studio 2015\Projects\Gis_SzybkiKurier\Gis_SzybkiKurier\bin\Debug\Gis_SzybkiKurier.exe.config
+C:\Users\Slightom\Documents\Visual Studio 2015\Projects\Gis_SzybkiKurier\Gis_SzybkiKurier\bin\Debug\Gis_SzybkiKurier.exe
+C:\Users\Slightom\Documents\Visual Studio 2015\Projects\Gis_SzybkiKurier\Gis_SzybkiKurier\bin\Debug\Gis_SzybkiKurier.pdb
+C:\Users\Slightom\Documents\Visual Studio 2015\Projects\Gis_SzybkiKurier\Gis_SzybkiKurier\obj\Debug\Gis_SzybkiKurier.csprojResolveAssemblyReference.cache
+C:\Users\Slightom\Documents\Visual Studio 2015\Projects\Gis_SzybkiKurier\Gis_SzybkiKurier\obj\Debug\Gis_SzybkiKurier.exe
+C:\Users\Slightom\Documents\Visual Studio 2015\Projects\Gis_SzybkiKurier\Gis_SzybkiKurier\obj\Debug\Gis_SzybkiKurier.pdb
