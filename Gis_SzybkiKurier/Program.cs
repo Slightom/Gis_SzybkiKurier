@@ -1,4 +1,5 @@
-﻿using System;
+﻿//new version
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -60,14 +61,14 @@ namespace Gis_SzybkiKurier
                 left = parent + parent + 1;
                 right = left + 1;
                 if (left >= heapSize) break;
-                dmin = (int)d[i, h[left]];
+                dmin = d[i, h[left]];
                 pmin = left;
-                if ((right < heapSize) && (dmin > (int)d[i, h[right]])) // if right son exists and has shorter route
+                if ((right < heapSize) && (dmin > d[i, h[right]])) // if right son exists and has shorter route
                 {
-                    dmin = (int)d[i, h[right]];
+                    dmin = d[i, h[right]];
                     pmin = right;
                 }
-                if ((int)d[i, h[parent]] <= dmin) break;
+                if (d[i, h[parent]] <= dmin) break;
                 x = h[parent]; h[parent] = h[pmin]; h[pmin] = x;
                 hp[h[parent]] = parent; hp[h[pmin]] = pmin;
                 parent = pmin;
@@ -96,9 +97,9 @@ namespace Gis_SzybkiKurier
         static void Main(string[] args)
         {
             int n = 0, m = 0, k = 0, g = 0, i, j;
-            string name = "duzy.in";
+            string name = "duzy.txt";
             List<edge>[] li;               // list of incidence 
-            short[,] d;                      // [n,n] dijkstry, shortest routs from every top to every top 
+            short[,] d;                    // [n,n] dijkstry, shortest routs from every top to every top 
             int[,] gg;                     // [g,2] conditions
             List<int> Q = new List<int>(); // collection of MustSeeCity
 
@@ -122,12 +123,12 @@ namespace Gis_SzybkiKurier
 
             readFile2(name, n, m, k, g, li, gg); // load List of incidence and list of conditions
 
-
+            
             List<int[]> permutations = determinePermutations2(Q); // determine all permutations
 
             //DateTime start = DateTime.Now;
             //TimeSpan time; 
-            dijkstry(d, li, n, k); // determine shortest routes from every top to every top    
+            dijkstry(d, li, n, k); // determine shortest routes from 0,1,2..k,n-1 tops to every top    
             //time = DateTime.Now - start;
 
             //Console.WriteLine("Czas: " + time.Seconds + "." + time.Milliseconds);
@@ -345,6 +346,8 @@ namespace Gis_SzybkiKurier
             //}
             #endregion
         }
+
+    
 
         private static void insertNumber(List<int> Q, int[] permutation, int n, List<int[]> permutations)
         {
